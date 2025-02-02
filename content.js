@@ -26,14 +26,23 @@ function findCID() {
 
 
         if (ludocidMatch?.length > 1 || altMatch?.length > 1 || foundHexCid) {
+            let potentialCID;
             if (foundHexCid) {
-                foundCID = BigInt('0x' + foundHexCid).toString();
+                potentialCID = BigInt('0x' + foundHexCid).toString();
             } else {
-                foundCID = ludocidMatch ? ludocidMatch[1] : altMatch[1];
+                potentialCID = ludocidMatch ? ludocidMatch[1] : altMatch[1];
+            }
+
+            // Validate CID before setting and using it
+            if (!isValidCID(potentialCID)) {
+                console.error('Invalid CID format detected at source:', potentialCID);
+                return null;
             }
             
+            foundCID = potentialCID;
+            
             // Add DOM display logic here
-            const elements = [...document.querySelectorAll('h1, .fontHeadlineSmall')];
+            const elements = [...document.querySelectorAll('h1')];
             elements.forEach(element => {
                 updateCidDisplay(element, foundCID);
             });
@@ -57,6 +66,10 @@ function findCID() {
         console.error('Error in findCID:', error);
         return null;
     }
+}
+
+function isValidCID(cid) {
+    return typeof cid === 'string' && /^\d+$/.test(cid);
 }
 
 // Add the helper functions for creating and updating CID display
@@ -90,7 +103,12 @@ function createCidDisplay() {
     copyButton.addEventListener('mouseenter', () => copyButton.style.background = 'rgba(0, 0, 0, 0.08)');
     copyButton.addEventListener('mouseleave', () => copyButton.style.background = 'rgba(0, 0, 0, 0.05)');
     copyButton.addEventListener('click', () => {
-        navigator.clipboard.writeText(cidValue.textContent)
+        const cidText = cidValue.textContent;
+        if (!isValidCID(cidText)) {
+            console.error('Invalid CID format detected, clipboard operation blocked');
+            return;
+        }
+        navigator.clipboard.writeText(cidText)
             .then(() => {
                 const originalText = copyButton.innerHTML;
                 copyButton.innerHTML = 'COPIED';
@@ -153,6 +171,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.type === 'GET_CID' && foundCID) {
         sendResponse({ cid: foundCID });
     } else if (request.type === 'COPY_TO_CLIPBOARD' && request.cid) {
+        if (!isValidCID(request.cid)) {
+            console.error('Invalid CID format detected in message, clipboard operation blocked');
+            return;
+        }
         navigator.clipboard.writeText(request.cid).then(() => {
             // Show a small notification that it was copied
             const notification = document.createElement('div');

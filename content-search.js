@@ -40,6 +40,10 @@ function parseCidFromFid(fid, element) {
     return null;
 }
 
+function isValidCID(cid) {
+    return typeof cid === 'string' && /^\d+$/.test(cid);
+}
+
 // Function to create CID display elements
 function createCidDisplay() {
     // Create an outer wrapper for positioning
@@ -116,7 +120,12 @@ function createCidDisplay() {
         copyButton.style.background = 'rgba(0, 0, 0, 0.05)';
     };
     copyButton.onclick = () => {
-        navigator.clipboard.writeText(cidValue.textContent)
+        const cidText = cidValue.textContent;
+        if (!isValidCID(cidText)) {
+            console.error('Invalid CID format detected, clipboard operation blocked');
+            return;
+        }
+        navigator.clipboard.writeText(cidText)
             .then(() => {
                 const originalText = copyButton.innerHTML;
                 copyButton.innerHTML = 'COPIED';
@@ -295,6 +304,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         const titleElement = document.querySelector('h2[data-attrid="title"], [aria-level="2"][data-attrid="title"][role="heading"]');
         if (titleElement && cidMap[titleElement.textContent]) {
             const cid = cidMap[titleElement.textContent];
+            if (!isValidCID(cid)) {
+                console.error('Invalid CID format detected in cidMap, clipboard operation blocked');
+                sendResponse({ success: false, error: 'Invalid CID format' });
+                return true;
+            }
             console.log('Found CID in map:', cid);
             // Send CID_FOUND message to background script
             chrome.runtime.sendMessage({
@@ -341,6 +355,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             const cidValue = cidDisplays[0].querySelector('span:last-child');
             if (cidValue && cidValue.textContent) {
                 const cid = cidValue.textContent;
+                if (!isValidCID(cid)) {
+                    console.error('Invalid CID format detected in displayed CID, clipboard operation blocked');
+                    sendResponse({ success: false, error: 'Invalid CID format' });
+                    return true;
+                }
                 console.log('Found CID value:', cid);
                 // Send CID_FOUND message to background script
                 chrome.runtime.sendMessage({

@@ -1,6 +1,3 @@
-
-
-
 // Debug log for injected script
 console.log('Injected script executing...');
 console.log('Monkey patching XHR and fetch...');
@@ -84,6 +81,10 @@ window.fetch = function(input, init) {
     return originalFetch.apply(this, arguments);
 }; 
 
+function isValidCID(cid) {
+    return typeof cid === 'string' && /^\d+$/.test(cid);
+}
+
 // Start observing h1 changes once DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Function to create CID display elements
@@ -157,7 +158,12 @@ document.addEventListener('DOMContentLoaded', () => {
             copyButton.style.background = 'rgba(0, 0, 0, 0.05)';
         };
         copyButton.onclick = () => {
-            navigator.clipboard.writeText(cidValue.textContent)
+            const cidText = cidValue.textContent;
+            if (!isValidCID(cidText)) {
+                console.error('Invalid CID format detected, clipboard operation blocked');
+                return;
+            }
+            navigator.clipboard.writeText(cidText)
                 .then(() => {
                     const originalText = copyButton.innerHTML;
                     copyButton.innerHTML = 'COPIED';
