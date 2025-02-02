@@ -17,24 +17,24 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.google.com/maps/*", "*://maps.app.goo.gl/*"],
+      "matches": ["https://www.google.com/maps/*", "https://maps.app.goo.gl/*"],
       "run_at": "document_end",
       "js": ["content.js"]
     },
     {
-      "matches": ["*://*.google.com/maps/*", "*://maps.app.goo.gl/*"],
+      "matches": ["https://www.google.com/maps/*", "https://maps.app.goo.gl/*"],
       "run_at": "document_start",
       "js": ["monkeypatch.js"]
     },
     {
-      "matches": ["*://*.google.com/search/*"],
+      "matches": ["https://www.google.com/search*"],
       "run_at": "document_start",
       "js": ["content-search.js"]
     }
   ],
   "web_accessible_resources": [{
     "resources": ["inject.js"],
-    "matches": ["*://*.google.com/*"]
+    "matches": ["https://*.google.com/*"]
   }],
   "icons": {
     "16": "icons/icon-inactive-16.png",
