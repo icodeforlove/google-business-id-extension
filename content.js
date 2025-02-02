@@ -11,11 +11,35 @@ function findCID() {
             }
         })();
         
-        const match = htmlContent.match(/ludocid\\\\u003d(\d+)\\\\u/);
-        
-        if (match && match[1]) {
-            foundCID = match[1];
+        const ludocidMatch = htmlContent.match(/ludocid\\\\u003d(\d+)\\\\u/);
+        const altMatch = htmlContent.match(/\["\d+","(\d+)"\],"\/g\//);
+        const signoutMatch = htmlContent.match(/guidedhelpid=\\"gbacsw\\" href=\\"([^"]+)\\"/);
+
+        let foundHexCid;
+        if (signoutMatch) {
+            const signoutUrl = signoutMatch[1];
+            const cidMatch = signoutUrl.match(/0x[a-z0-9]+:0x([a-z0-9]+)/);
+            if (cidMatch) {
+                foundHexCid = cidMatch[1];
+            }
+        }
+
+
+        if (ludocidMatch?.length > 1 || altMatch?.length > 1 || foundHexCid) {
+            if (foundHexCid) {
+                foundCID = BigInt('0x' + foundHexCid).toString();
+            } else {
+                foundCID = ludocidMatch ? ludocidMatch[1] : altMatch[1];
+            }
+            
+            // Add DOM display logic here
+            const elements = [...document.querySelectorAll('h1, .fontHeadlineSmall')];
+            elements.forEach(element => {
+                updateCidDisplay(element, foundCID);
+            });
+
             try {
+                console.log('Sending CID_FOUND message:', foundCID);
                 chrome.runtime.sendMessage({ type: 'CID_FOUND', cid: foundCID });
             } catch (e) {
                 // Ignore chrome runtime errors in eval context
@@ -33,6 +57,74 @@ function findCID() {
         console.error('Error in findCID:', error);
         return null;
     }
+}
+
+// Add the helper functions for creating and updating CID display
+function createCidDisplay() {
+    const outerWrapper = document.createElement('div');
+    outerWrapper.style.display = 'block';
+    
+    const wrapperContainer = document.createElement('div');
+    wrapperContainer.style.cssText = 'display: flex; align-items: center; gap: 6px; margin-top: 4px;';
+
+    const cidDisplay = document.createElement('div');
+    cidDisplay.style.cssText = 'display: flex; align-items: center; gap: 4px; padding: 1px 4px; background: rgba(66, 133, 244, 0.1); border-radius: 2px; font-size: 11px; color: #1a73e8; font-family: Google Sans, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;';
+    
+    const leftContainer = document.createElement('div');
+    leftContainer.style.cssText = 'display: flex; align-items: center; gap: 4px;';
+    
+    const cidLabel = document.createElement('span');
+    cidLabel.textContent = 'CID';
+    cidLabel.style.cssText = 'font-size: 10px; font-weight: 500; color: #1a73e8; opacity: 0.8;';
+    
+    const cidValue = document.createElement('span');
+    cidValue.style.cssText = 'font-family: Roboto Mono, monospace; font-weight: 500; color: #1a73e8;';
+    
+    leftContainer.append(cidLabel, cidValue);
+    cidDisplay.appendChild(leftContainer);
+    
+    const copyButton = document.createElement('button');
+    copyButton.innerHTML = 'COPY';
+    copyButton.style.cssText = 'background: rgba(0, 0, 0, 0.05); border: none; border-radius: 2px; cursor: pointer; padding: 1px 4px; font-size: 10px; font-weight: 500; color: rgba(0, 0, 0, 0.65); transition: all 0.2s ease; text-transform: uppercase;';
+    
+    copyButton.addEventListener('mouseenter', () => copyButton.style.background = 'rgba(0, 0, 0, 0.08)');
+    copyButton.addEventListener('mouseleave', () => copyButton.style.background = 'rgba(0, 0, 0, 0.05)');
+    copyButton.addEventListener('click', () => {
+        navigator.clipboard.writeText(cidValue.textContent)
+            .then(() => {
+                const originalText = copyButton.innerHTML;
+                copyButton.innerHTML = 'COPIED';
+                copyButton.style.background = 'rgba(0, 0, 0, 0.08)';
+                setTimeout(() => {
+                    copyButton.innerHTML = originalText;
+                    copyButton.style.background = 'rgba(0, 0, 0, 0.05)';
+                }, 1000);
+            });
+    });
+
+    wrapperContainer.append(cidDisplay, copyButton);
+    outerWrapper.appendChild(wrapperContainer);
+    
+    return { outerWrapper, cidValue };
+}
+
+function updateCidDisplay(anchorEl, value) {
+    if (!anchorEl) return;
+
+    let display = anchorEl.querySelector('[data-cid-display]');
+    if (!display) {
+        const { outerWrapper, cidValue } = createCidDisplay();
+        outerWrapper.dataset.cidDisplay = 'true';
+        display = outerWrapper;
+        anchorEl.appendChild(display);
+    }
+
+    const cidValue = display.querySelector('span:last-child');
+    if (cidValue) {
+        cidValue.textContent = value;
+    }
+    
+    display.style.display = 'block';
 }
 
 // Wait for page to be fully loaded

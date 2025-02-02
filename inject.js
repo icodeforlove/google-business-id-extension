@@ -1,3 +1,6 @@
+
+
+
 // Debug log for injected script
 console.log('Injected script executing...');
 console.log('Monkey patching XHR and fetch...');
@@ -14,7 +17,6 @@ XMLHttpRequest.prototype.open = function(method, url) {
 };
 
 XMLHttpRequest.prototype.send = function(body) {
-
     if (this._url && this._url.includes('maps/preview/place')) {
         // console.log('XHR intercepted:', this._url);
         

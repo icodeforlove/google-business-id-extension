@@ -17,9 +17,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.google.com/maps/*", "https://maps.app.goo.gl/*"],
-      "run_at": "document_end",
-      "js": ["content.js"]
+      "matches": [
+        "https://*.google.com/maps*",
+        "https://*.goo.gl/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
     },
     {
       "matches": ["https://www.google.com/maps/*", "https://maps.app.goo.gl/*"],
@@ -34,7 +37,10 @@
   ],
   "web_accessible_resources": [{
     "resources": ["inject.js"],
-    "matches": ["https://*.google.com/*"]
+    "matches": [
+      "*://*.google.com/*",
+      "*://*.goo.gl/*"
+    ]
   }],
   "icons": {
     "16": "icons/icon-inactive-16.png",

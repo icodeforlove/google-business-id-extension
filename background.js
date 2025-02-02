@@ -54,4 +54,4 @@ function updateIcon(tabId, hasCID) {
         tabId: tabId,
         title: hasCID ? chrome.i18n.getMessage('copyButton') : chrome.i18n.getMessage('noPlaceIdFound')
     });
-} 
+}

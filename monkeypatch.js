@@ -1,5 +1,5 @@
 // Debug log for content script execution
-console.log('Content script executing...');
+console.log('Content script executing...', window.location.href);
 
 // Create and inject the script element
 const script = document.createElement('script');
