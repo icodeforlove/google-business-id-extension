@@ -17,17 +17,17 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.google.com/maps/*"],
+      "matches": ["*://*.google.com/maps/*", "*://maps.app.goo.gl/*"],
       "run_at": "document_end",
       "js": ["content.js"]
     },
     {
-      "matches": ["*://*.google.com/maps/*"],
+      "matches": ["*://*.google.com/maps/*", "*://maps.app.goo.gl/*"],
       "run_at": "document_start",
       "js": ["monkeypatch.js"]
     },
     {
-      "matches": ["*://*.google.com/search/*", "*://www.google.com/search*"],
+      "matches": ["*://*.google.com/search/*"],
       "run_at": "document_start",
       "js": ["content-search.js"]
     }

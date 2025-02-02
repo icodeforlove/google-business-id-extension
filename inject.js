@@ -36,7 +36,7 @@ XMLHttpRequest.prototype.send = function(body) {
                         const cid = cidMatch[1];
                         const name = nameMatch[1];
                         cidMap[name] = cid;
-                        console.log(`CID found for "${name}":`, cid);
+                        console.log(`[2]CID found for "${name}":`, cid);
                     }
                 } catch (e) {
                     console.error('Error reading XHR response:', e);
@@ -205,7 +205,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const cid = BigInt('0x' + cidMatch[1].substring(2)).toString();
         const name = cidMatch[2];
         cidMap[name] = cid;
-        console.log(`CID found for "${name}":`, cid);
+        // issue with how chrome delivers tags for SEO when not directly navigated to from maps.app.goo.gl
+        const title = document.documentElement.innerHTML.match(/aria-label="([^"]+)" role="main" jslog=/);
+        if (title) {
+            cidMap[title[1]] = cid;
+        }
+        console.log(`[1]CID found for "${name}":`, cid);
     }
 
     // Function to check elements for CID matches
