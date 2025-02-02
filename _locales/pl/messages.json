@@ -1,0 +1,27 @@
+{
+  "extensionName": {
+    "message": "Ekstraktor ID Profilu Firmy Google - Łatwe Kopiowanie",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "To rozszerzenie wyodrębnia ID Profili Firmy ze wszystkich wpisów Google Maps, ułatwiając ich kopiowanie i używanie. Nie ma potrzeby sprawdzania kodu ani przeszukiwania adresów URL. Funkcje: Automatyczne wykrywanie ID profili, Kopiowanie jednym kliknięciem, Szybkie i lekkie, Działa ze wszystkimi stronami Maps. Idealne dla specjalistów marketingu, programistów i analityków danych, którzy potrzebują szybko i niezawodnie wyodrębnić ID. Zainstaluj teraz, aby uprościć swój przepływ pracy!",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "ID Profilu Firmy skopiowane!",
+    "description": "Notification shown when ID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "KOPIUJ",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "SKOPIOWANO",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "Nie znaleziono ID Profilu Firmy na tej stronie",
+    "description": "Message shown when no ID is found"
+  }
+}
+ 

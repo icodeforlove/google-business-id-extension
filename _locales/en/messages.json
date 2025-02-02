@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "Google Business Profile ID Extractor - Easy Copy",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "This extension extracts Business Profile IDs from all Google Maps listings, making it easy to copy and use. No need to inspect code or dig through URLs. Features: Auto-detects Profile IDs, One-click copy, Fast and lightweight, Works with all Maps pages.",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "Business Profile ID copied!",
+    "description": "Notification shown when ID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "COPY",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "COPIED",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "No Business Profile ID found on this page",
+    "description": "Message shown when no ID is found"
+  }
+} 

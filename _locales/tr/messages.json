@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "Google İşletme Profili ID Çıkarıcı - Kolay Kopyalama",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Bu uzantı, tüm Google Haritalar listelerinden İşletme Profili ID'lerini çıkarır ve kolayca kopyalamanızı sağlar. Kod incelemeye veya URL'lerde aramaya gerek yok. Özellikler: Otomatik profil ID algılama, Tek tıkla kopyalama, Hızlı ve hafif, Tüm Haritalar sayfalarıyla çalışır. ID'leri hızlı ve güvenilir şekilde çıkarması gereken pazarlama uzmanları, geliştiriciler ve veri analistleri için mükemmel. İş akışınızı basitleştirmek için hemen yükleyin!",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "İşletme Profili ID'si kopyalandı!",
+    "description": "Notification shown when ID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "KOPYALA",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "KOPYALANDI",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "Bu sayfada İşletme Profili ID'si bulunamadı",
+    "description": "Message shown when no ID is found"
+  }
+} 

@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "مستخرج معرف ملف نشاط تجاري Google - نسخ سهل",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "هذه الإضافة تستخرج معرفات ملفات النشاط التجاري من جميع قوائم خرائط Google، مما يسهل نسخها واستخدامها. لا حاجة لفحص الكود أو البحث في عناوين URL. المميزات: كشف تلقائي لمعرفات الملفات، نسخ بنقرة واحدة، سريع وخفيف، يعمل مع جميع صفحات الخرائط. مثالي لمتخصصي التسويق والمطورين ومحللي البيانات الذين يحتاجون إلى استخراج المعرفات بسرعة وموثوقية. ثبت الآن لتبسيط سير عملك!",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "تم نسخ معرف ملف النشاط التجاري!",
+    "description": "Notification shown when ID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "نسخ",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "تم النسخ",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "لم يتم العثور على معرف ملف نشاط تجاري في هذه الصفحة",
+    "description": "Message shown when no ID is found"
+  }
+} 

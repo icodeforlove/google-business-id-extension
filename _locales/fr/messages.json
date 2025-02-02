@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "Extracteur d'ID de Profil d'Entreprise Google - Copie Facile",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Cette extension extrait les ID de Profil d'Entreprise de toutes les fiches Google Maps, facilitant leur copie et utilisation. Pas besoin d'inspecter le code ou de chercher dans les URLs. Fonctionnalités : Détection automatique des ID de profils, Copie en un clic, Rapide et léger, Compatible avec toutes les pages Maps. Parfait pour les professionnels du marketing, les développeurs et les analystes de données qui ont besoin d'extraire des ID rapidement et de manière fiable. Installez maintenant pour simplifier votre flux de travail !",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "CID copié !",
+    "description": "Notification shown when CID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "COPIER",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "COPIÉ",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "Aucun CID trouvé sur cette page",
+    "description": "Message shown when no CID is found"
+  }
+} 

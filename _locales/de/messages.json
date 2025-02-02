@@ -1,0 +1,27 @@
+{
+  "extensionName": {
+    "message": "Google Unternehmensprofil-ID Extraktor - Einfaches Kopieren",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Diese Erweiterung extrahiert Unternehmensprofil-IDs aus allen Google Maps-Einträgen und ermöglicht einfaches Kopieren und Verwenden. Kein Code-Inspizieren oder URL-Durchsuchen nötig. Funktionen: Automatische Erkennung von Profil-IDs, Ein-Klick-Kopieren, Schnell und leicht, Funktioniert mit allen Maps-Seiten. Perfekt für Marketing-Profis, Entwickler und Datenanalysten, die schnell und zuverlässig IDs extrahieren müssen. Jetzt installieren, um Ihren Arbeitsablauf zu vereinfachen!",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "Unternehmensprofil-ID kopiert!",
+    "description": "Notification shown when ID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "KOPIEREN",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "KOPIERT",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "Keine Unternehmensprofil-ID auf dieser Seite gefunden",
+    "message": "Keine CID auf dieser Seite gefunden",
+    "description": "Message shown when no CID is found"
+  }
+} 

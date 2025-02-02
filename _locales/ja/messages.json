@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "Google ビジネス プロフィール ID 抽出ツール - 簡単コピー",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "この拡張機能は、Google マップの全リストからビジネス プロフィール ID を抽出し、簡単にコピーして使用できます。コードの確認や URL の検索は不要です。機能：プロフィール ID の自動検出、ワンクリックコピー、軽量・高速、すべての Maps ページで動作。マーケティング担当者、開発者、データ分析者など、ID を素早く確実に抽出する必要がある方に最適です。今すぐインストールしてワークフローを効率化しましょう！",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "ビジネス プロフィール ID をコピーしました！",
+    "description": "Notification shown when ID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "コピー",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "コピー済み",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "このページにビジネス プロフィール ID が見つかりません",
+    "description": "Message shown when no ID is found"
+  }
+} 

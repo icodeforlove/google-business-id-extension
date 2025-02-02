@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "Estrattore ID Profilo Business Google - Copia Facile",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Questa estensione estrae gli ID dei Profili Business da tutte le schede di Google Maps, rendendo facile copiarli e utilizzarli. Non serve ispezionare il codice o cercare negli URL. Caratteristiche: Rilevamento automatico degli ID profilo, Copia con un clic, Veloce e leggero, Funziona con tutte le pagine Maps. Perfetto per professionisti del marketing, sviluppatori e analisti di dati che necessitano di estrarre ID in modo rapido e affidabile. Installa ora per semplificare il tuo flusso di lavoro!",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "ID Profilo Business copiato!",
+    "description": "Notification shown when ID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "COPIA",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "COPIATO",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "Nessun ID Profilo Business trovato in questa pagina",
+    "description": "Message shown when no ID is found"
+  }
+} 

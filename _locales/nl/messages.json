@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "Google Place ID Zoeker",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Detecteert en kopieert Google Place ID's van pagina's",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "Place ID gekopieerd!",
+    "description": "Notification shown when Place ID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "KOPIËREN",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "GEKOPIEERD",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "Geen Place ID gevonden op deze pagina",
+    "description": "Message shown when no Place ID is found"
+  }
+} 

@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "Google 商家檔案 ID 提取器 - 輕鬆複製",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "此擴充功能可從所有 Google 地圖列表中提取商家檔案 ID，使其易於複製和使用。無需檢查程式碼或搜尋網址。功能：自動偵測檔案 ID、一鍵複製、快速輕量、適用於所有地圖頁面。完美適合需要快速可靠地提取 ID 的行銷專業人員、開發人員和資料分析師。立即安裝，簡化您的工作流程！",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "商家檔案 ID 已複製！",
+    "description": "Notification shown when ID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "複製",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "已複製",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "此頁面未找到商家檔案 ID",
+    "description": "Message shown when no ID is found"
+  }
+} 

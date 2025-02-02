@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "Extractor de ID de Perfil de Negocio de Google - Copia Fácil",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Esta extensión extrae los ID de Perfil de Negocio de todos los listados de Google Maps, facilitando su copia y uso. No necesitas inspeccionar código ni buscar en URLs. Características: Detección automática de ID de perfiles, Copia con un solo clic, Rápido y ligero, Compatible con todas las páginas de Maps. Perfecto para profesionales del marketing, desarrolladores y analistas de datos que necesitan extraer ID de forma rápida y confiable. ¡Instálalo ahora para simplificar tu flujo de trabajo!",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "¡ID de Perfil de Negocio copiado!",
+    "description": "Notification shown when ID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "COPIAR",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "COPIADO",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "No se encontró ID de Perfil de Negocio en esta página",
+    "description": "Message shown when no ID is found"
+  }
+} 

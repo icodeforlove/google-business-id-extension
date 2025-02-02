@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "Экстрактор ID Бизнес-профиля Google - Простое копирование",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Это расширение извлекает ID бизнес-профилей из всех списков Google Карт, упрощая их копирование и использование. Не нужно проверять код или искать в URL. Функции: Автоматическое определение ID профилей, Копирование одним кликом, Быстрое и легкое, Работает со всеми страницами Карт. Идеально подходит для маркетологов, разработчиков и аналитиков данных, которым нужно быстро и надежно извлекать ID. Установите сейчас, чтобы упростить рабочий процесс!",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "ID бизнес-профиля скопирован!",
+    "description": "Notification shown when ID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "КОПИРОВАТЬ",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "СКОПИРОВАНО",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "ID бизнес-профиля не найден на этой странице",
+    "description": "Message shown when no ID is found"
+  }
+} 

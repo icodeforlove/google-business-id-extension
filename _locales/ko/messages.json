@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "Google 비즈니스 프로필 ID 추출기 - 쉬운 복사",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "이 확장 프로그램은 모든 Google 지도 목록에서 비즈니스 프로필 ID를 추출하여 쉽게 복사하고 사용할 수 있게 해줍니다. 코드 검사나 URL 검색이 필요 없습니다. 기능: 프로필 ID 자동 감지, 원클릭 복사, 빠르고 가벼움, 모든 지도 페이지에서 작동. 마케팅 전문가, 개발자, 데이터 분석가 등 ID를 빠르고 안정적으로 추출해야 하는 분들에게 완벽합니다. 지금 설치하여 작업 흐름을 단순화하세요!",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "비즈니스 프로필 ID가 복사되었습니다!",
+    "description": "Notification shown when ID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "복사",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "복사됨",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "이 페이지에서 비즈니스 프로필 ID를 찾을 수 없습니다",
+    "description": "Message shown when no ID is found"
+  }
+} 

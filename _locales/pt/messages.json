@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "Localizador de ID de Lugares Google",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Detecta e copia IDs de lugares das páginas do Google Maps",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "ID do lugar copiado!",
+    "description": "Notification shown when Place ID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "COPIAR",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "COPIADO",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "Nenhum ID de lugar encontrado nesta página",
+    "description": "Message shown when no Place ID is found"
+  }
+} 

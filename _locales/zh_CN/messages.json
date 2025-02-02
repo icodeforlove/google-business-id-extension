@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "Google 商家资料 ID 提取器 - 轻松复制",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "此扩展程序可从所有 Google 地图列表中提取商家资料 ID，使其易于复制和使用。无需检查代码或搜索网址。功能：自动检测资料 ID、一键复制、快速轻量、适用于所有地图页面。完美适合需要快速可靠地提取 ID 的营销专业人员、开发人员和数据分析师。立即安装，简化您的工作流程！",
+    "description": "Description of the extension"
+  },
+  "placeIdCopied": {
+    "message": "商家资料 ID 已复制！",
+    "description": "Notification shown when ID is copied to clipboard"
+  },
+  "copyButton": {
+    "message": "复制",
+    "description": "Text shown on the copy button before clicking"
+  },
+  "copiedButton": {
+    "message": "已复制",
+    "description": "Text shown on the copy button after clicking"
+  },
+  "noPlaceIdFound": {
+    "message": "此页面未找到商家资料 ID",
+    "description": "Message shown when no ID is found"
+  }
+} 
