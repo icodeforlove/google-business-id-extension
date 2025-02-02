@@ -4,7 +4,7 @@
     "description": "The name of the extension"
   },
   "extensionDescription": {
-    "message": "This extension extracts Business Profile IDs from all Google Maps listings, making it easy to copy and use. No need to inspect code or dig through URLs. Features: Auto-detects Profile IDs, One-click copy, Fast and lightweight, Works with all Maps pages.",
+    "message": "Automatically detects and displays Business Profile IDs on Google Maps listings with one-click copy feature. No code digging needed.",
     "description": "Description of the extension"
   },
   "placeIdCopied": {
