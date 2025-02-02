@@ -70,6 +70,17 @@ The extension uses:
 - Modern CSS for a clean, Google-like interface
 - Standardized decimal format for all ID displays
 
+## Screenshots
+
+### Google Maps Integration
+![Screenshot 1](screenshots/screenshot-1.jpg)
+
+### Location Details
+![Screenshot 2](screenshots/screenshot-2.jpg)
+
+### Search Results
+![Screenshot 3](screenshots/screenshot-3.jpg)
+
 ## Contributing
 
 Feel free to submit issues and enhancement requests! 
